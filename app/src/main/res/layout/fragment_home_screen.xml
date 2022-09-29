@@ -77,6 +77,7 @@
             app:layout_constraintVertical_bias="0.164"
             app:srcCompat="@drawable/profile_photo" />
 
+<!--need change from here -->
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
             android:layout_width="match_parent"
@@ -100,6 +101,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/logo"
                 app:layout_constraintVertical_bias="0.0">
 
+<!--                card will send to next -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="320dp"
                     android:layout_height="150dp"
@@ -114,37 +116,12 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="320dp"
-                    android:layout_height="150dp"
-                    android:layout_marginStart="10dp"
-                    android:background="@color/white">
-
-                    <LinearLayout
-                        android:layout_width="336dp"
-                        android:layout_height="160dp"
-                        android:background="@drawable/card_view_image">
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="320dp"
-                    android:layout_height="150dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@color/white">
-
-                    <LinearLayout
-                        android:layout_width="336dp"
-                        android:layout_height="160dp"
-                        android:background="@drawable/card_view_image">
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
+<!--                card end here -->
+<!--                recycler view here -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec_upcomming"/>
 
             </LinearLayout>
 
@@ -238,6 +215,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/upcomingEventsHeading"
                 app:layout_constraintVertical_bias="0.0">
 
+<!--                card ongoing -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="330dp"
                     android:layout_height="147dp"
@@ -334,203 +312,11 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                 </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="330dp"
-                    android:layout_height="147dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
-                    app:cardCornerRadius="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/white">
-
-
-                        <ImageView
-                            android:id="@+id/upcoming_events_photo_2"
-                            android:layout_width="127dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/events_image" />
-
-                        <TextView
-                            android:id="@+id/upcoming_events_name_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7sp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="Name of the Event"
-                            android:textAlignment="center"
-                            android:textColor="#363636"
-                            android:textSize="15sp"
-
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/upcoming_events_photo_2"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/button_2"
-                            android:layout_width="92dp"
-                            android:layout_height="26dp"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/upcoming_events_photo_2"
-                            app:layout_constraintTop_toBottomOf="@+id/upcoming_events_name_2"
-                            app:layout_constraintVertical_bias="0.809"
-                            app:srcCompat="@drawable/button" />
-
-                        <TextView
-                            android:id="@+id/mode_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="@string/offline"
-                            android:textAlignment="center"
-                            android:textColor="#FF6262"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/button_2"
-                            app:layout_constraintEnd_toEndOf="@+id/button_2"
-                            app:layout_constraintStart_toStartOf="@+id/button_2"
-                            app:layout_constraintTop_toTopOf="@+id/button_2" />
-
-                        <ImageView
-                            android:id="@+id/rec_2"
-                            android:layout_width="45dp"
-                            android:layout_height="47dp"
-                            android:layout_marginBottom="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.377"
-                            app:layout_constraintStart_toEndOf="@+id/button_2"
-                            app:srcCompat="@drawable/rec" />
-
-                        <TextView
-                            android:id="@+id/date_2"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="1dp"
-                            android:text="02 OCT"
-                            android:textAlignment="center"
-                            android:textColor="#333333"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rec_2"
-                            app:layout_constraintEnd_toEndOf="@+id/rec_2"
-                            app:layout_constraintStart_toStartOf="@+id/rec_2"
-                            app:layout_constraintTop_toTopOf="@+id/rec_2" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="330dp"
-                    android:layout_height="147dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
-                    app:cardCornerRadius="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/white">
-
-
-                        <ImageView
-                            android:id="@+id/upcoming_events_photo_3"
-                            android:layout_width="127dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/events_image" />
-
-                        <TextView
-                            android:id="@+id/upcoming_events_name_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7sp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="Name of the Event"
-                            android:textAlignment="center"
-                            android:textColor="#363636"
-                            android:textSize="15sp"
-
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/upcoming_events_photo_3"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/button_3"
-                            android:layout_width="92dp"
-                            android:layout_height="26dp"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/upcoming_events_photo_3"
-                            app:layout_constraintTop_toBottomOf="@+id/upcoming_events_name_3"
-                            app:layout_constraintVertical_bias="0.809"
-                            app:srcCompat="@drawable/button" />
-
-                        <TextView
-                            android:id="@+id/mode_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="@string/offline"
-                            android:textAlignment="center"
-                            android:textColor="#FF6262"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/button_3"
-                            app:layout_constraintEnd_toEndOf="@+id/button_3"
-                            app:layout_constraintStart_toStartOf="@+id/button_3"
-                            app:layout_constraintTop_toTopOf="@+id/button_3" />
-
-                        <ImageView
-                            android:id="@+id/rec_3"
-                            android:layout_width="45dp"
-                            android:layout_height="47dp"
-                            android:layout_marginBottom="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.377"
-                            app:layout_constraintStart_toEndOf="@+id/button_3"
-                            app:srcCompat="@drawable/rec" />
-
-                        <TextView
-                            android:id="@+id/date_3"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="1dp"
-                            android:text="02 OCT"
-                            android:textAlignment="center"
-                            android:textColor="#333333"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rec_3"
-                            app:layout_constraintEnd_toEndOf="@+id/rec_3"
-                            app:layout_constraintStart_toStartOf="@+id/rec_3"
-                            app:layout_constraintTop_toTopOf="@+id/rec_3" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
+<!--card end -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec_upcome"/>
 
 
             </LinearLayout>
