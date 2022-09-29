@@ -25,13 +25,18 @@
             app:layout_constraintTop_toTopOf="@+id/login_scree"
             app:layout_constraintVertical_bias="0.0" />
 
+
+
+
+
         <ImageView
             android:id="@+id/login_scree"
             android:layout_width="146dp"
             android:layout_height="146dp"
             android:layout_marginTop="24dp"
-            android:background="@drawable/ic_launcher_background"
+            android:background="@drawable/comments_image"
             android:clipToOutline="true"
+            android:scaleType="centerCrop"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" >

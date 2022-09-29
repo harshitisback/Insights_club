@@ -166,8 +166,8 @@ public class signUp_screen extends AppCompatActivity {
                         }else {
                             uid = "NULL_"+ UUID.randomUUID();
                         }
-                        uploadUserData();
-//                        uploadUserImage();
+//                        uploadUserData();
+                        uploadUserImage();
                     }
                 }).addOnFailureListener(new OnFailureListener() {
                     @Override
@@ -194,7 +194,7 @@ public class signUp_screen extends AppCompatActivity {
                     @Override
                     public void onSuccess(Uri uri) {
                         ProfileImg = String.valueOf(uri);
-//                        uploadUserData();
+                        uploadUserData();
                     }
                 });
             }
@@ -216,7 +216,7 @@ public class signUp_screen extends AppCompatActivity {
         user.put("email", Email);
         user.put("mobile", Mobile);
         user.put("password", Pass);
-//        user.put("imageUrl", ProfileImg);
+        user.put("imageUrl", ProfileImg);
 
 
         dbRef.child(uid).setValue(user)

@@ -58,13 +58,13 @@ public class login_screen extends AppCompatActivity {
 
     }
 
-        @Override
-    protected void onStart() {
-        super.onStart();
-        if(auth.getCurrentUser() != null){
-            openHomeScreen();
-        }
-    }
+//        @Override
+//    protected void onStart() {
+//        super.onStart();
+//        if(auth.getCurrentUser() != null){
+//            openHomeScreen();
+//        }
+//    }
 
     private void validateData() {
         Email = email.getText().toString();
