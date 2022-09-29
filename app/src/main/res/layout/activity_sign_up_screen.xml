@@ -30,7 +30,7 @@
             android:layout_width="146dp"
             android:layout_height="146dp"
             android:layout_marginTop="24dp"
-            android:background="@drawable/profilepic"
+            android:background="@drawable/ic_launcher_background"
             android:clipToOutline="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,7 +46,7 @@
             android:layout_alignParentEnd="true"
             android:background="@drawable/addphotobtn"
             android:fontFamily="@font/poppins_bold"
-            android:onClick="uploadpic"
+
             app:layout_constraintBottom_toBottomOf="@+id/login_scree"
             app:layout_constraintEnd_toEndOf="@+id/login_scree"
             app:layout_constraintHorizontal_bias="1.0"
@@ -126,7 +126,7 @@
 
         <Button
             android:id="@+id/button4"
-            android:onClick="usersignup"
+
             android:layout_width="250dp"
             android:layout_height="51dp"
             android:layout_marginTop="20dp"
@@ -142,7 +142,7 @@
 
         <Button
             android:id="@+id/signupwg"
-            android:onClick="signupgoogle"
+
             android:layout_width="250dp"
             android:layout_height="51dp"
             android:layout_marginTop="27dp"

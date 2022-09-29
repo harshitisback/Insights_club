@@ -100,7 +100,7 @@
             android:layout_marginTop="72dp"
             android:background="@drawable/gradientbtn"
             android:fontFamily="@font/poppins_bold"
-            android:onClick="loginbtn"
+
             android:textAllCaps="false"
             android:textColor="#FFFFFF"
             app:circularflow_radiusInDP="5dp"
@@ -149,7 +149,6 @@
             android:layout_marginTop="51dp"
             android:background="#00000000"
             android:fontFamily="@font/poppins_bold"
-            android:onClick="signup"
             android:text="Signup now"
             android:textColor="#FFA852"
             app:layout_constraintEnd_toEndOf="parent"
