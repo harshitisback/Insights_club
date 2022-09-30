@@ -39,7 +39,6 @@ public class UpcommingAdapter extends RecyclerView.Adapter<UpcommingAdapter.View
         holder.name.setText(upcommingList.get(position).getName());
         holder.mode.setText(upcommingList.get(position).getMode());
         holder.date.setText(upcommingList.get(position).getDate());
-
     }
 
     @Override

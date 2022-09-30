@@ -35,6 +35,12 @@
             android:icon="@drawable/ic_baseline_arrow_back_24"
             android:title="Log Out" />
 
+        <item
+            android:id="@+id/test"
+            android:icon="@drawable/articles_icon"
+            android:title="test"
+            />
+
 
 
 
