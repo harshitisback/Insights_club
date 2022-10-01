@@ -62,8 +62,9 @@
         <!--            app:layout_constraintVertical_bias="0.298" />-->
 
 
-        <de.hdodenhof.circleimageview.CircleImageView
+        <ImageView
             android:id="@+id/profile_pic"
+
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginStart="15dp"
@@ -74,8 +75,9 @@
             app:layout_constraintStart_toEndOf="@+id/insights_club"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.164"
-            android:src="@drawable/profile_photo" />
+            app:srcCompat="@drawable/profile_photo" />
 
+<!--need change from here -->
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView"
             android:layout_width="match_parent"
@@ -99,6 +101,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/logo"
                 app:layout_constraintVertical_bias="0.0">
 
+<!--                card will send to next -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="320dp"
                     android:layout_height="150dp"
@@ -113,37 +116,12 @@
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="320dp"
-                    android:layout_height="150dp"
-                    android:layout_marginStart="10dp"
-                    android:background="@color/white">
-
-                    <LinearLayout
-                        android:layout_width="336dp"
-                        android:layout_height="160dp"
-                        android:background="@drawable/card_view_image">
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="320dp"
-                    android:layout_height="150dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@color/white">
-
-                    <LinearLayout
-                        android:layout_width="336dp"
-                        android:layout_height="160dp"
-                        android:background="@drawable/card_view_image">
-
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
+<!--                card end here -->
+<!--                recycler view here -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec_upcomming"/>
 
             </LinearLayout>
 
@@ -214,6 +192,7 @@
             app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
 
 
+
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView_2"
             android:layout_width="match_parent"
@@ -237,299 +216,13 @@
                 app:layout_constraintTop_toBottomOf="@+id/upcomingEventsHeading"
                 app:layout_constraintVertical_bias="0.0">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="330dp"
-                    android:layout_height="147dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
-                    app:cardCornerRadius="10dp">
+<!--                card ongoing -->
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/white">
-
-
-                        <ImageView
-                            android:id="@+id/upcoming_events_photo_1"
-                            android:layout_width="127dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/events_image" />
-
-                        <TextView
-                            android:id="@+id/upcoming_events_name_1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7sp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="Name of the Event"
-                            android:textAlignment="center"
-                            android:textColor="#363636"
-                            android:textSize="15sp"
-
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/upcoming_events_photo_1"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/button_1"
-                            android:layout_width="92dp"
-                            android:layout_height="26dp"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/upcoming_events_photo_1"
-                            app:layout_constraintTop_toBottomOf="@+id/upcoming_events_name_1"
-                            app:layout_constraintVertical_bias="0.809"
-                            app:srcCompat="@drawable/button" />
-
-                        <TextView
-                            android:id="@+id/mode"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="@string/offline"
-                            android:textAlignment="center"
-                            android:textColor="#FF6262"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/button_1"
-                            app:layout_constraintEnd_toEndOf="@+id/button_1"
-                            app:layout_constraintStart_toStartOf="@+id/button_1"
-                            app:layout_constraintTop_toTopOf="@+id/button_1" />
-
-                        <ImageView
-                            android:id="@+id/rec_1"
-                            android:layout_width="45dp"
-                            android:layout_height="47dp"
-                            android:layout_marginBottom="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.377"
-                            app:layout_constraintStart_toEndOf="@+id/button_1"
-                            app:srcCompat="@drawable/rec" />
-
-                        <TextView
-                            android:id="@+id/date"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="1dp"
-                            android:text="02 OCT"
-                            android:textAlignment="center"
-                            android:textColor="#333333"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rec_1"
-                            app:layout_constraintEnd_toEndOf="@+id/rec_1"
-                            app:layout_constraintStart_toStartOf="@+id/rec_1"
-                            app:layout_constraintTop_toTopOf="@+id/rec_1" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="330dp"
-                    android:layout_height="147dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
-                    app:cardCornerRadius="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/white">
-
-
-                        <ImageView
-                            android:id="@+id/upcoming_events_photo_2"
-                            android:layout_width="127dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/events_image" />
-
-                        <TextView
-                            android:id="@+id/upcoming_events_name_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7sp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="Name of the Event"
-                            android:textAlignment="center"
-                            android:textColor="#363636"
-                            android:textSize="15sp"
-
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/upcoming_events_photo_2"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/button_2"
-                            android:layout_width="92dp"
-                            android:layout_height="26dp"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/upcoming_events_photo_2"
-                            app:layout_constraintTop_toBottomOf="@+id/upcoming_events_name_2"
-                            app:layout_constraintVertical_bias="0.809"
-                            app:srcCompat="@drawable/button" />
-
-                        <TextView
-                            android:id="@+id/mode_2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="@string/offline"
-                            android:textAlignment="center"
-                            android:textColor="#FF6262"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/button_2"
-                            app:layout_constraintEnd_toEndOf="@+id/button_2"
-                            app:layout_constraintStart_toStartOf="@+id/button_2"
-                            app:layout_constraintTop_toTopOf="@+id/button_2" />
-
-                        <ImageView
-                            android:id="@+id/rec_2"
-                            android:layout_width="45dp"
-                            android:layout_height="47dp"
-                            android:layout_marginBottom="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.377"
-                            app:layout_constraintStart_toEndOf="@+id/button_2"
-                            app:srcCompat="@drawable/rec" />
-
-                        <TextView
-                            android:id="@+id/date_2"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="1dp"
-                            android:text="02 OCT"
-                            android:textAlignment="center"
-                            android:textColor="#333333"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rec_2"
-                            app:layout_constraintEnd_toEndOf="@+id/rec_2"
-                            app:layout_constraintStart_toStartOf="@+id/rec_2"
-                            app:layout_constraintTop_toTopOf="@+id/rec_2" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="330dp"
-                    android:layout_height="147dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
-                    app:cardCornerRadius="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/white">
-
-
-                        <ImageView
-                            android:id="@+id/upcoming_events_photo_3"
-                            android:layout_width="127dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/events_image" />
-
-                        <TextView
-                            android:id="@+id/upcoming_events_name_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7sp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="Name of the Event"
-                            android:textAlignment="center"
-                            android:textColor="#363636"
-                            android:textSize="15sp"
-
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/upcoming_events_photo_3"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/button_3"
-                            android:layout_width="92dp"
-                            android:layout_height="26dp"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/upcoming_events_photo_3"
-                            app:layout_constraintTop_toBottomOf="@+id/upcoming_events_name_3"
-                            app:layout_constraintVertical_bias="0.809"
-                            app:srcCompat="@drawable/button" />
-
-                        <TextView
-                            android:id="@+id/mode_3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="@string/offline"
-                            android:textAlignment="center"
-                            android:textColor="#FF6262"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/button_3"
-                            app:layout_constraintEnd_toEndOf="@+id/button_3"
-                            app:layout_constraintStart_toStartOf="@+id/button_3"
-                            app:layout_constraintTop_toTopOf="@+id/button_3" />
-
-                        <ImageView
-                            android:id="@+id/rec_3"
-                            android:layout_width="45dp"
-                            android:layout_height="47dp"
-                            android:layout_marginBottom="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.377"
-                            app:layout_constraintStart_toEndOf="@+id/button_3"
-                            app:srcCompat="@drawable/rec" />
-
-                        <TextView
-                            android:id="@+id/date_3"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="1dp"
-                            android:text="02 OCT"
-                            android:textAlignment="center"
-                            android:textColor="#333333"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rec_3"
-                            app:layout_constraintEnd_toEndOf="@+id/rec_3"
-                            app:layout_constraintStart_toStartOf="@+id/rec_3"
-                            app:layout_constraintTop_toTopOf="@+id/rec_3" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
+<!--card end -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec_upcome"/>
 
 
             </LinearLayout>
@@ -624,6 +317,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/ongoing_events"
                 app:layout_constraintVertical_bias="0.0">
 
+<!--                card start -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="330dp"
                     android:layout_height="147dp"
@@ -720,202 +414,13 @@
 
                 </androidx.cardview.widget.CardView>
 
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="330dp"
-                    android:layout_height="147dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
-                    app:cardCornerRadius="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/white">
+<!--                card end-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec_ongoing"/>
 
 
-                        <ImageView
-                            android:id="@+id/ongoing_events_photo_5"
-                            android:layout_width="127dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/events_image" />
-
-                        <TextView
-                            android:id="@+id/ongoing_events_name_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7sp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="Name of the Event"
-                            android:textAlignment="center"
-                            android:textColor="#363636"
-                            android:textSize="15sp"
-
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/ongoing_events_photo_5"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/button_5"
-                            android:layout_width="92dp"
-                            android:layout_height="26dp"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/ongoing_events_photo_5"
-                            app:layout_constraintTop_toBottomOf="@+id/ongoing_events_name_5"
-                            app:layout_constraintVertical_bias="0.809"
-                            app:srcCompat="@drawable/button" />
-
-                        <TextView
-                            android:id="@+id/mode_5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="@string/offline"
-                            android:textAlignment="center"
-                            android:textColor="#FF6262"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/button_5"
-                            app:layout_constraintEnd_toEndOf="@+id/button_5"
-                            app:layout_constraintStart_toStartOf="@+id/button_5"
-                            app:layout_constraintTop_toTopOf="@+id/button_5" />
-
-                        <ImageView
-                            android:id="@+id/rec_5"
-                            android:layout_width="45dp"
-                            android:layout_height="47dp"
-                            android:layout_marginBottom="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.377"
-                            app:layout_constraintStart_toEndOf="@+id/button_5"
-                            app:srcCompat="@drawable/rec" />
-
-                        <TextView
-                            android:id="@+id/date_5"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="1dp"
-                            android:text="02 OCT"
-                            android:textAlignment="center"
-                            android:textColor="#333333"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rec_5"
-                            app:layout_constraintEnd_toEndOf="@+id/rec_5"
-                            app:layout_constraintStart_toStartOf="@+id/rec_5"
-                            app:layout_constraintTop_toTopOf="@+id/rec_5" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="330dp"
-                    android:layout_height="147dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
-                    app:cardCornerRadius="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/white">
-
-
-                        <ImageView
-                            android:id="@+id/ongoing_events_photo_6"
-                            android:layout_width="127dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/events_image" />
-
-                        <TextView
-                            android:id="@+id/ongoing_events_name_6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7sp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="Name of the Event"
-                            android:textAlignment="center"
-                            android:textColor="#363636"
-                            android:textSize="15sp"
-
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/ongoing_events_photo_6"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/button_6"
-                            android:layout_width="92dp"
-                            android:layout_height="26dp"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/ongoing_events_photo_6"
-                            app:layout_constraintTop_toBottomOf="@+id/ongoing_events_name_6"
-                            app:layout_constraintVertical_bias="0.809"
-                            app:srcCompat="@drawable/button" />
-
-                        <TextView
-                            android:id="@+id/mode_6"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="@string/offline"
-                            android:textAlignment="center"
-                            android:textColor="#FF6262"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/button_6"
-                            app:layout_constraintEnd_toEndOf="@+id/button_6"
-                            app:layout_constraintStart_toStartOf="@+id/button_6"
-                            app:layout_constraintTop_toTopOf="@+id/button_6" />
-
-                        <ImageView
-                            android:id="@+id/rec_6"
-                            android:layout_width="45dp"
-                            android:layout_height="47dp"
-                            android:layout_marginBottom="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.377"
-                            app:layout_constraintStart_toEndOf="@+id/button_6"
-                            app:srcCompat="@drawable/rec" />
-
-                        <TextView
-                            android:id="@+id/date_6"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="1dp"
-                            android:text="02 OCT"
-                            android:textAlignment="center"
-                            android:textColor="#333333"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rec_6"
-                            app:layout_constraintEnd_toEndOf="@+id/rec_6"
-                            app:layout_constraintStart_toStartOf="@+id/rec_6"
-                            app:layout_constraintTop_toTopOf="@+id/rec_6" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
 
 
             </LinearLayout>
@@ -1010,6 +515,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/past_events"
                 app:layout_constraintVertical_bias="0.0">
 
+<!--                card start -->
                 <androidx.cardview.widget.CardView
                     android:layout_width="330dp"
                     android:layout_height="147dp"
@@ -1108,202 +614,12 @@
 
                 </androidx.cardview.widget.CardView>
 
+<!--                card end -->
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="330dp"
-                    android:layout_height="147dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
-                    app:cardCornerRadius="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/white">
-
-
-                        <ImageView
-                            android:id="@+id/past_events_photo_8"
-                            android:layout_width="127dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/events_image" />
-
-                        <TextView
-                            android:id="@+id/past_events_name_8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7sp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="Name of the Event"
-                            android:textAlignment="center"
-                            android:textColor="#363636"
-                            android:textSize="15sp"
-
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/past_events_photo_8"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/button_8"
-                            android:layout_width="92dp"
-                            android:layout_height="26dp"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/past_events_photo_8"
-                            app:layout_constraintTop_toBottomOf="@+id/past_events_name_8"
-                            app:layout_constraintVertical_bias="0.809"
-                            app:srcCompat="@drawable/button" />
-
-                        <TextView
-                            android:id="@+id/mode_8"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="@string/offline"
-                            android:textAlignment="center"
-                            android:textColor="#FF6262"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/button_8"
-                            app:layout_constraintEnd_toEndOf="@+id/button_8"
-                            app:layout_constraintStart_toStartOf="@+id/button_8"
-                            app:layout_constraintTop_toTopOf="@+id/button_8" />
-
-                        <ImageView
-                            android:id="@+id/rec_8"
-                            android:layout_width="45dp"
-                            android:layout_height="47dp"
-                            android:layout_marginBottom="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.377"
-                            app:layout_constraintStart_toEndOf="@+id/button_8"
-                            app:srcCompat="@drawable/rec" />
-
-                        <TextView
-                            android:id="@+id/date_8"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="1dp"
-                            android:text="02 OCT"
-                            android:textAlignment="center"
-                            android:textColor="#333333"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rec_8"
-                            app:layout_constraintEnd_toEndOf="@+id/rec_8"
-                            app:layout_constraintStart_toStartOf="@+id/rec_8"
-                            app:layout_constraintTop_toTopOf="@+id/rec_8" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
-
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="330dp"
-                    android:layout_height="147dp"
-                    android:layout_margin="10dp"
-                    android:background="@color/white"
-                    app:cardCornerRadius="10dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@color/white">
-
-
-                        <ImageView
-                            android:id="@+id/past_events_photo_9"
-                            android:layout_width="127dp"
-                            android:layout_height="127dp"
-                            android:layout_marginStart="5dp"
-                            android:layout_marginTop="2dp"
-                            android:layout_marginBottom="2dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:srcCompat="@drawable/events_image" />
-
-                        <TextView
-                            android:id="@+id/past_events_name_9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="7sp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="Name of the Event"
-                            android:textAlignment="center"
-                            android:textColor="#363636"
-                            android:textSize="15sp"
-
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/past_events_photo_9"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <ImageView
-                            android:id="@+id/button_9"
-                            android:layout_width="92dp"
-                            android:layout_height="26dp"
-                            android:layout_marginStart="16dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintStart_toEndOf="@+id/past_events_photo_9"
-                            app:layout_constraintTop_toBottomOf="@+id/past_events_name_9"
-                            app:layout_constraintVertical_bias="0.809"
-                            app:srcCompat="@drawable/button" />
-
-                        <TextView
-                            android:id="@+id/mode_9"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="2dp"
-                            android:text="@string/offline"
-                            android:textAlignment="center"
-                            android:textColor="#FF6262"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/button_9"
-                            app:layout_constraintEnd_toEndOf="@+id/button_9"
-                            app:layout_constraintStart_toStartOf="@+id/button_9"
-                            app:layout_constraintTop_toTopOf="@+id/button_9" />
-
-                        <ImageView
-                            android:id="@+id/rec_9"
-                            android:layout_width="45dp"
-                            android:layout_height="47dp"
-                            android:layout_marginBottom="12dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.377"
-                            app:layout_constraintStart_toEndOf="@+id/button_9"
-                            app:srcCompat="@drawable/rec" />
-
-                        <TextView
-                            android:id="@+id/date_9"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:fontFamily="@font/poppins_bold"
-                            android:padding="1dp"
-                            android:text="02 OCT"
-                            android:textAlignment="center"
-                            android:textColor="#333333"
-                            android:textSize="13sp"
-                            app:layout_constraintBottom_toBottomOf="@+id/rec_9"
-                            app:layout_constraintEnd_toEndOf="@+id/rec_9"
-                            app:layout_constraintStart_toStartOf="@+id/rec_9"
-                            app:layout_constraintTop_toTopOf="@+id/rec_9" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rec_past"/>
 
             </LinearLayout>
 
@@ -1340,45 +656,45 @@
             app:srcCompat="@drawable/dots_light" />
 
 
-        <!--        <RelativeLayout-->
-        <!--            android:id="@+id/linearLayout45"-->
-        <!--            android:layout_width="336dp"-->
-        <!--            android:layout_height="64dp"-->
-        <!--            android:gravity="bottom"-->
-        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-        <!--            app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--            app:layout_constraintRight_toRightOf=""-->
-        <!--            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView_4">-->
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/linearLayout45"-->
+<!--            android:layout_width="336dp"-->
+<!--            android:layout_height="64dp"-->
+<!--            android:gravity="bottom"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintLeft_toLeftOf="parent"-->
+<!--            app:layout_constraintRight_toRightOf=""-->
+<!--            app:layout_constraintTop_toBottomOf="@id/horizontalScrollView_4">-->
 
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigation_bar"
-            android:layout_width="336dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="5dp"
-            android:layout_gravity="bottom"
-            android:padding="10dp"
-            app:circularflow_radiusInDP="17dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_4"
-            app:menu="@menu/bottom_navigation_view_components">
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNavigation_bar"
+                android:layout_width="336dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:layout_gravity="bottom"
+                android:padding="10dp"
+                app:circularflow_radiusInDP="17dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView_4"
+                app:menu="@menu/bottom_navigation_view_components">
 
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        </FrameLayout>
+            </FrameLayout>
 
-        <!--        </RelativeLayout>-->
+<!--        </RelativeLayout>-->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

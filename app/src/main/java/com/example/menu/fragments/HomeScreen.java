@@ -36,16 +36,13 @@ public class HomeScreen extends Fragment {
     RecyclerView upcom_rec;
     FirebaseFirestore db;
 
-    List<upcomming> upcommingList;
-    UpcommingAdapter upcommingAdapter;
-
 
     public HomeScreen() {
 
     }
 
-
-
+    List<upcomming> upcommingList;
+    UpcommingAdapter upcommingAdapter;
 
 
     TextView textView_1;
@@ -68,10 +65,10 @@ public class HomeScreen extends Fragment {
 
 
 //
-//        upcom_rec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
-//        upcommingList = new ArrayList<>();
-//        upcommingAdapter = new UpcommingAdapter(getActivity(), upcommingList);
-//        upcom_rec.setAdapter(upcommingAdapter);
+        upcom_rec.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.HORIZONTAL, false));
+        upcommingList = new ArrayList<>();
+        upcommingAdapter = new UpcommingAdapter(getActivity(), upcommingList);
+        upcom_rec.setAdapter(upcommingAdapter);
 //
 //        db.collection("UpcommingEvents")
 //                .get()
@@ -81,7 +78,7 @@ public class HomeScreen extends Fragment {
 //                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
 //                        if (task.isSuccessful()) {
 //                            for (QueryDocumentSnapshot document : task.getResult()) {
-//                                upcomming up = document.toObject(com.example.menu.modelss.upcomming.class);
+//                                upcomming up = document.toObject(upcomming.class);
 //                                upcommingList.add(up);
 //                                upcommingAdapter.notifyDataSetChanged();
 //                            }
