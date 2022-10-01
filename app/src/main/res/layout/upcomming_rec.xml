@@ -7,12 +7,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <ImageView
             android:id="@+id/upcoming_events_photo"
-            android:layout_width="127dp"
-            android:layout_height="127dp"
+            android:layout_width="137dp"
+            android:layout_height="147dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp"
@@ -21,8 +22,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-           >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/upcoming_events_name"
@@ -32,7 +32,7 @@
                 android:layout_marginTop="7sp"
                 android:layout_marginRight="10dp"
                 android:fontFamily="@font/poppins_bold"
-                android:padding="2dp"
+                android:padding="5dp"
                 android:text="Name of the Event"
                 android:textAlignment="center"
                 android:textColor="#363636"
@@ -49,9 +49,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
-                    android:background="@drawable/button"
-                    android:layout_marginLeft="40dp"
-                     >
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button">
 
                     <TextView
                         android:id="@+id/mode"
@@ -60,36 +59,41 @@
                         android:text="@string/offline"
                         android:textAlignment="center"
                         android:textColor="#FF6262"
-                        android:textSize="13sp"/>
+                        android:textSize="17sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginBottom="2dp"
+                        />
 
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:id="@+id/rec_1"
-                    android:layout_width="102dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:backgroundTint="#F2E675"
+                    android:layout_width="80dp"
+                    android:layout_height="57sp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginBottom="2dp"
                     android:background="@drawable/rec"
-                    android:layout_marginLeft="40dp"
-                    >
+                    android:backgroundTint="#F2E675">
 
                     <TextView
                         android:id="@+id/date"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="57dp"
+                        android:layout_height="44dp"
                         android:layout_alignParentStart="true"
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
-                        android:layout_marginStart="28dp"
-                        android:layout_marginTop="8dp"
-                        android:layout_marginEnd="32dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="13dp"
+                        android:fontFamily="@font/poppins_bold"
                         android:text="02 OCT"
                         android:textAlignment="center"
                         android:textColor="#FF6262"
-                        android:textSize="13sp" />
+                        android:textSize="17sp" />
                 </RelativeLayout>
-
 
 
             </LinearLayout>
@@ -102,3 +106,4 @@
 
 
 </androidx.cardview.widget.CardView>
+
