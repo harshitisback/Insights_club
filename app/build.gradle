@@ -51,4 +51,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.14.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.14.0'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // picoso
+    implementation 'com.squareup.picasso:picasso:2.8'
 }
