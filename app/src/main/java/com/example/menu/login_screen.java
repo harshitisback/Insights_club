@@ -11,8 +11,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -20,9 +22,11 @@ public class login_screen extends AppCompatActivity {
 
     private FirebaseAuth auth;
     TextView login;
+    Button forgetpass;
     Button signup;
     EditText email, pass;
-    String Email, Pass;
+    String Email, Pass, resetEmail;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,7 @@ public class login_screen extends AppCompatActivity {
         login = findViewById(R.id.login_text);
 
         signup = findViewById(R.id.signupnow);
+        forgetpass = (Button) findViewById(R.id.forgetpass);
 
 
         // onclick listner
@@ -54,8 +59,33 @@ public class login_screen extends AppCompatActivity {
         });
 
 
+        // forget password
+        forgetpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetpass();
+            }
+        });
 
 
+
+
+    }
+
+    private void resetpass() {
+
+        resetEmail = email.getText().toString().trim();
+
+        auth.sendPasswordResetEmail(resetEmail).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()) {
+                    Toast.makeText(login_screen.this, "Check your email to reset the password", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(login_screen.this, "Something went wrong", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
 //        @Override
