@@ -718,7 +718,7 @@
 
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/profile_pic_"
             android:layout_width="45sp"
             android:layout_height="45sp"
             android:layout_marginStart="15dp"
