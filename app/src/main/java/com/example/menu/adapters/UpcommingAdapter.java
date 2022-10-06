@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.menu.R;
 import com.example.menu.modelss.upcomming;
-import com.squareup.picasso.Picasso;
+import com.example.menu.R;
 
 import java.util.List;
 
@@ -54,9 +54,9 @@ public class UpcommingAdapter extends RecyclerView.Adapter<UpcommingAdapter.View
             super(itemView);
 
             eventImg = itemView.findViewById(R.id.upcoming_events_photo);
-            name = itemView.findViewById(R.id.upcoming_events_name);
-            mode = itemView.findViewById(R.id.mode);
-            date = itemView.findViewById(R.id.date);
+            name = itemView.findViewById(R.id.upcoming_event_name);
+            mode = itemView.findViewById(R.id.upcoming_event_mode);
+            date = itemView.findViewById(R.id.upcoming_event_date);
 
 
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".profile_page_screen">
+    tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -30,7 +30,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/userImag"
+            android:id="@+id/imageView"
             android:layout_width="128dp"
             android:layout_height="128dp"
             android:layout_marginStart="30dp"
@@ -44,7 +44,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/rectangle_4"
             app:layout_constraintVertical_bias="0.04"
-            tools:src="@drawable/comments_image" />
+            tools:src="@drawable/photo" />
 
         <TextView
             android:id="@+id/memberName"
@@ -60,6 +60,7 @@
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="@+id/rectangle_4"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imageView"
             app:layout_constraintVertical_bias="0.23" />
