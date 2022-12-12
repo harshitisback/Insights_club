@@ -41,6 +41,8 @@ public class HomeScreen extends Fragment {
 
     }
 
+    // upcomming adapter
+
     List<upcomming> upcommingList;
     UpcommingAdapter upcommingAdapter;
 
